@@ -4,20 +4,159 @@
     <meta charset="UTF-8">
     <title>New</title>
     <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: grey;
+            height: 115px;
+        }
+        .header h1 {
+            margin-top: 0;
+        }
+        .content {
+            position: relative;
+            left: 30px;
+        }
+        .group {
+            padding-bottom: 10px;
+            /*width: 20%;*/
+            /*width: 145px;*/
+        }
+        input[type=radio] {
+            margin-left: 30px;
+        }
+        input {
+            /*padding-right: 32px;*/
+            /*width: 100%;*/
+        }
+        
+        .group3 input[type=checkbox] {
+            display: none;
+        }
+        
+        .group3 input[type=checkbox]:checked + label {
+            background: #f2f2f2;
+            display:inline-block;
+            padding: 0 0 0 0px;
+        }
+
+        ul {
+            padding: 0px;
+            list-style: none;
+        }
+        li {
+            padding-bottom: 5px;
+        }
     </style>
 </head>
 <body>
-    <form action="contact.php" metod="GET">
-        <label for="client-name">Client Name:</label>                 
-        <input type="text" name="client-name" id="client-name" required>
-        <br>
-        <label>
-            Client Email:
-            <input type="email" name="client-email" required>
-        </label>
-        <br>
-        <input type="submit">
-        <input type="reset">
-    </form>
+    <header class="header">
+        <h1>Social Poll</h1>
+        <form>
+            <input type="search" name="search" placeholder=""> 
+            <input type="submit" value="Search Question">
+        </form>
+    </header>
+    <main class="content">
+        <h2>Questions:</h2>
+        <form action="https://formspree.io/volodymyr.khvesyk@gmail.com" method="POST">
+            <div class=col-1>
+                <div class="group">
+                    <label for="client-name">Client Name:               
+                        <input type="text" name="client-name" id="client-name" required>
+                    </label>  
+                </div>
+                <div class="group">
+                    <label>Client Email:
+                        <input type="email" name="client-email" required>
+                    </label>
+                </div>
+                <div class="group">
+                    Gender:
+                    <input type="radio" name="gender" required id="male" value="male"><label for="male"><i><small>Male</small></i></label>
+                    <input type="radio" name="gender" required id="female" value="female"><label for="female"><i><small>Female</small></i></label>
+                </div>
+                <div class="group">
+                    <label>Client Age:
+                        <input type="text" name="age" required style="margin-left: 10px">
+                    </label>
+                </div>
+            </div>
+            <div class="col-2">
+                <!--<div class="group">-->
+                <!--    <label>Phone Number:</label>-->
+                <!--    <input type="text" name="phone-number" required pattern="[A-Z]{2}[\d]{4}[A-Z]{2}" placeholder="(063) 321 21 21" title="(063)">-->
+                <!--</div>-->
+                <div class="group2">
+                    <h4>What is your favorite colour:</h4>
+                    <ul>
+                        <li>
+                            <label><input type="checkbox" name="colour" value="Green"><i><small>Green</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="colour" value="Blue"><i><small>Blue</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="colour" value="Red"><i><small>Red</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="colour" value="Yellow"><i><small>Yellow</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="colour" value="Other"><i><small>Other</small></i></label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group2">
+                    <h4>What is your favorite film:</h4>
+                    <ul>
+                        <li>
+                            <label><input type="checkbox" name="film" value="1+1"><i><small>1+1</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="film" value="Immortal"><i><small>Immortal</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="film" value="Arrival"><i><small>Arrival</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="film" value="Mad Max"><i><small>Mad Max</small></i></label>
+                        </li>
+                        <li>
+                            <label><input type="checkbox" name="film" value="Other"><i><small>Other</small></i></label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group3">
+                    <h4>What do you like more:</h4>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="os" id="windows" value="Windows"><label for="windows"><img alt="Windows" src='img/windows.png'></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="os" id="mac" value="Mac OS"><label for="mac"><img alt="Mac OS" src='img/mac.png'></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="os" id="linux" value="Linux"><label for="linux"><img alt="Linux" src='img/linux.png'></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="os" id="android" value="Android"><label for="android"><img alt="Android" src='img/android.png'></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="group">
+                <input type="submit">
+                <input type="reset">
+            </div>
+        </form>
+        <div class="links">
+            <a href="index.html" style="text-decoration: none"> GO BACK </a>
+        </div>
+    </main>
+    
+    
 </body>
 </html>
