@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background-image: url(img/bg.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat
+        }
+        .header {
+            background-color: black;
+            height: 100px;
+        }
+        .header h1 {
+            margin-top: 0;
+            color: white;
+        }
+        nav {
+            text-align: center;
+        }
+        .content {
+            color: white;
+        }
+        h3 {
+            text-align: center;
+        }
+        .table {
+            position: relative;
+            left: 25%;
+        }
+        table {
+            width: 50%; 
+            border-spacing: 0; 
+        }
+        a {
+            
+        }
+        .links {
+            padding: 100px 0 20px 20px;
+        }
+        .footer {
+            background-color: black;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+        }
+        .footer p {
+            margin: 0px;
+            color: white;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Table Page</h1>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="form.html">Form</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h3>Table Content</h3>
+            <div class="table">
+                <table border="1">
+                    <tr>
+                        <th rowspan="2" colspan="2"></th><td rowspan="4" colspan="2"></td><td rowspan="8" colspan="3"></td><td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" colspan="2"></th><td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4" colspan="4"></th><td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><th></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="links">
+                <form style="display: inline" action="index.html">
+                     <button> GO BACK INDEX </button>
+                </form>
+                <form style="display: inline" action="form.html">
+                     <button> GO TO POLL </button>
+                </form>
+                <!--<button><a href="index.html" style="text-decoration: none"> GO BACK INDEX </a></button>-->
+                <!--<button><a href="form.html" style="text-decoration: none"> GO TO POLL </a></button>-->
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2012-2016 Table</p> 
+    </footer>
+</body>
+</html>

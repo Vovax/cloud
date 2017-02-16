@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New</title>
+    <title>Form</title>
     <style>
         body {
             margin: 0;
             overflow-x: hidden;
+            background-image: url(img/bg.jpg);
+            background-size:cover;
         }
         .header {
-            background-color: grey;
-            height: 115px;
+            background-color: black;
+            height: 100px;
         }
         .header h1 {
             margin-top: 0;
+            color: white;
+        }
+        nav {
+            text-align: center;
         }
         .content {
             position: relative;
             left: 30px;
+            color: white;
         }
         .group {
             padding-bottom: 10px;
@@ -26,10 +33,6 @@
         }
         input[type=radio] {
             margin-left: 30px;
-        }
-        input {
-            /*padding-right: 32px;*/
-            /*width: 100%;*/
         }
         
         .group3 input[type=checkbox] {
@@ -41,6 +44,9 @@
             display:inline-block;
             padding: 0 0 0 0px;
         }
+        .links {
+            padding: 20px 0 20px 20px;
+        }
 
         ul {
             padding: 0px;
@@ -49,11 +55,31 @@
         li {
             padding-bottom: 5px;
         }
+        .group-btn {
+            text-align: center;
+        }
+        .group-btn input {
+            width: 10%;
+        }
+        
+        .footer {
+            background-color: black;
+            height: 50px;
+        }
+        .footer p {
+            margin: 0px;
+            color: white;
+            padding-bottom: 5px;
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <h1>Social Poll</h1>
+        <nav>
+            <a href="index.html">Index</a> |
+            <a href="form.html">Form</a>
+        </nav>
         <form>
             <input type="search" name="search" placeholder=""> 
             <input type="submit" value="Search Question">
@@ -147,16 +173,22 @@
                     </ul>
                 </div>
             </div>
-            <div class="group">
+            <div class="group-btn">
                 <input type="submit">
                 <input type="reset">
             </div>
         </form>
         <div class="links">
-            <a href="index.html" style="text-decoration: none"> GO BACK </a>
+            <form style="display: inline" action="index.html">
+                <button> GO BACK INDEX </button>
+            </form>
+            <form style="display: inline" action="table.html">
+                <button> GO TO TABLE </button>
+            </form>
         </div>
     </main>
-    
-    
+    <footer class="footer">
+        <p>© 2012-2016 Table</p> 
+    </footer>
 </body>
 </html>
